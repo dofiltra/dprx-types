@@ -14,4 +14,4 @@ class App {
   }
 }
 
-new App({}).start()
+// new App({}).start()
