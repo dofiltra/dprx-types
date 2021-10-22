@@ -26,9 +26,9 @@ export type TQiwi = {
   secretKey?: string
 }
 
-export type TDomainData = {
-  port: number
-  donors: TDonor[]
+export class TDomainData {
+  public port!: number
+  public donors!: TDonor[]
 
   security?: {
     token?: string
