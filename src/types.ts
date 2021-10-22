@@ -1,3 +1,11 @@
+export type TAppDprxSettings = {
+  serverName?: string
+  token?: string
+  email?: string
+  restartMinutes?: number
+  maxOpenBrowsers?: number
+}
+
 export type TgBotInfo = {
   token: string
   chatIds: number[] | string[]
