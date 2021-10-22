@@ -12,9 +12,6 @@ class App {
   constructor({}: TAppSettings) {
     dotenv.config({ path: path.join(App.rootPath, `.env`) })
   }
-
-  async start() {
-  }
 }
 
 new App({}).start()
