@@ -29,6 +29,7 @@ export type TQiwi = {
 export class TDomainData {
   public port!: number
   public donors!: TDonor[]
+  public token!: string
 
   security?: {
     token?: string
