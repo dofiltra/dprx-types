@@ -30,6 +30,7 @@ export class TDomainData {
   public port!: number
   public donors!: TDonor[]
   public token!: string
+  public host!: string
 
   security?: {
     token?: string
