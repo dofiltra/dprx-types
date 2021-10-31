@@ -28,9 +28,9 @@ export type TQiwi = {
 
 export class TDomainData {
   public port!: number
-  public donors!: TDonor[]
   public token!: string
   public host!: string
+  public donors!: TDonor[]
 
   security?: {
     token?: string
@@ -56,6 +56,10 @@ export class TDomainData {
   telegram?: {
     bots?: TgBotInfo[]
   }
+  rewrite?: {
+    enable: boolean
+    opts?: TRewriteOpts
+  }
 }
 
 export type TDomainsData = {
@@ -63,7 +67,7 @@ export type TDomainsData = {
 }
 
 export type TRewriteOpts = {
-  coefWordtune: number
+  coefWtn?: number
   selectors?: string[]
 }
 
