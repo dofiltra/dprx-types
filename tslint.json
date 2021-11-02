@@ -1,4 +1,4 @@
 {
   "extends": ["tslint:recommended", "tslint-config-prettier"],
-  "max-classes-per-file": ["error", 0]
+  "max-classes-per-file": [true, 10]
 }
