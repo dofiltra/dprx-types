@@ -228,3 +228,10 @@ export type TAdsItem = {
   selectors?: string[]
   repeatN?: number
 }
+
+export class RewritePage {
+  public pageId!: string
+  public sendResultTo!: string
+  public url!: string
+  public rewriteOpts?: TRewriteOpts
+}
