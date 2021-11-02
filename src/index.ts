@@ -1,3 +1,5 @@
+/* tslint:disable:max-classes-per-file */
+
 export type TAppDprxSettings = {
   serverName?: string
   token?: string
