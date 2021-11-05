@@ -236,4 +236,7 @@ export class RewritePage {
   public sendResultTo!: string
   public url!: string
   public rewriteOpts?: TRewriteOpts
+
+  public token!: string
+  public host!: string
 }
