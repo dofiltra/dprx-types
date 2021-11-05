@@ -235,8 +235,8 @@ export class RewritePage {
   public pageId!: string
   public sendResultTo!: string
   public url!: string
-  public rewriteOpts?: TRewriteOpts
 
   public token!: string
   public host!: string
+  public donorDomain!: string
 }
