@@ -247,14 +247,14 @@ export class RewriteText {
   public blocks?: RewriteTextBlock[]
 }
 export class RewriteTextBlock {
-  public origText!: string // ~2500 symbols
-  public enSentences?: RewriteTextSentence[] // ~10x250 symbols
-  public targetLangSentences?: RewriteTextSentence[] // ~1x250 symbols
+  // public origText!: string // ~2500 symbols
+  // public enSentences?: RewriteTextSentence[] // ~10x250 symbols
+  // public targetLangSentences?: RewriteTextSentence[] // ~1x250 symbols
 }
-export class RewriteTextSentence {
-  public sentence!: string
-  public suggestions?: string[]
-}
+// export class RewriteTextSentence {
+//   public sentence!: string
+//   public suggestions?: string[]
+// }
 export enum RewriteTextStatus {
   New = 0,
   InProgress = 3,
@@ -263,4 +263,22 @@ export enum RewriteTextStatus {
 export enum RewriteTextTargetLang {
   EN = 0,
   RU = 1
+}
+export enum RewriteTextBlockType {
+  Unknown = 'unknow',
+  Paragraph = 'paragraph',
+  Image = 'image',
+  Header = 'header',
+  List = 'list',
+  Embed = 'embed',
+  Table = 'table',
+  Marker = 'marker',
+  Warning = 'warning',
+  LinkTool = 'linkTool',
+  Raw = 'raw',
+  Quote = 'quote',
+  CheckList = 'checklist',
+  Delimiter = 'delimiter',
+  InlineCode = 'inlineCode',
+  SimpleImage = 'simpleImage'
 }
