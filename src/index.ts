@@ -242,15 +242,19 @@ export class RewritePage {
 }
 
 export class RewriteText {
-  // public text!: string
+  public targetLang!: string
+  public status!: RewriteTextStatus
+  public blocks?: RewriteTextBlock[]
 }
-
 export class RewriteTextBlock {
-  // public origText!: string
-  // public enText?: string
-  // public suggestions?: string[]
+  public origText!: string // ~2500 symbols
+  public enSentences?: RewriteTextSentence[] // ~10x250 symbols
+  public targetLangSentences?: RewriteTextSentence[] // ~1x250 symbols
 }
-
+export class RewriteTextSentence {
+  public sentence!: string
+  public suggestions?: string[]
+}
 export enum RewriteTextStatus {
   New = 0,
   InProgress = 3,

@@ -1,6 +1,6 @@
 {
   "name": "dprx-types",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,7 +17,6 @@
     "postversion": "git push && git push --tags",
     "dev": "npm run build && node --trace-warnings --experimental-modules --es-module-specifier-resolution=node ./lib/debug.js",
     "upg": "yarn upgrade --latest && yarn run build"
-
   },
   "repository": {
     "type": "git",
