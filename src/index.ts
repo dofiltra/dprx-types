@@ -240,3 +240,23 @@ export class RewritePage {
   public host!: string
   public donorDomain!: string
 }
+
+export class RewriteText {
+  // public text!: string
+}
+
+export class RewriteTextBlock {
+  // public origText!: string
+  // public enText?: string
+  // public suggestions?: string[]
+}
+
+export enum RewriteTextStatus {
+  New = 0,
+  InProgress = 3,
+  Completed = 9
+}
+export enum RewriteTextTargetLang {
+  EN = 0,
+  RU = 1
+}
