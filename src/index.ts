@@ -293,5 +293,6 @@ export enum RewriteTextBlockType {
   CheckList = 'checklist',
   Delimiter = 'delimiter',
   InlineCode = 'inlineCode',
-  SimpleImage = 'simpleImage'
+  SimpleImage = 'simpleImage',
+  Code = 'code'
 }
