@@ -256,7 +256,7 @@ export class RewriteTextBlock {
 //   public suggestions?: string[]
 // }
 export enum RewriteTextStatus {
-  New = 0,
+  NotStarted = 0,
   InProgress = 3,
   Completed = 9
 }
