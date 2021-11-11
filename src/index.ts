@@ -247,14 +247,27 @@ export class RewriteText {
   public blocks?: RewriteTextBlock[]
 }
 export class RewriteTextBlock {
-  // public origText!: string // ~2500 symbols
-  // public enSentences?: RewriteTextSentence[] // ~10x250 symbols
-  // public targetLangSentences?: RewriteTextSentence[] // ~1x250 symbols
+  public id!: string
+  public type!: string
+  public data!: RewriteTextBlockData
+  public rewriteDataSuggestions?: RewriteTextBlockData[]
 }
-// export class RewriteTextSentence {
-//   public sentence!: string
-//   public suggestions?: string[]
-// }
+
+export class RewriteTextBlockData {
+  public text?: string
+  public level?: number
+  public caption?: string
+  public items?: any[]
+  public link?: string
+  public meta?: any
+  public title?: string
+  public message?: string
+  public alignment?: 'left' | 'right' | 'center'
+  public html?: string
+  public content?: any[]
+  public withHeadings?: boolean
+  public data?: any
+}
 export enum RewriteTextStatus {
   NotStarted = 0,
   InProgress = 3,
