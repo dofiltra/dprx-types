@@ -259,6 +259,7 @@ export class RewriteTextBlockData {
   public caption?: string
   public items?: any[]
   public link?: string
+  public url?: string
   public meta?: any
   public title?: string
   public message?: string
@@ -267,6 +268,9 @@ export class RewriteTextBlockData {
   public content?: any[]
   public withHeadings?: boolean
   public data?: any
+  public withBackground?: boolean
+  public withBorder?: boolean
+  public stretched?: boolean
 }
 export enum RewriteTextStatus {
   NotStarted = 0,
