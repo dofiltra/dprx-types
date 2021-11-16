@@ -300,3 +300,11 @@ export enum RewriteTextBlockType {
   SimpleImage = 'simpleImage',
   Code = 'code'
 }
+
+export class ProxyItem {
+  public type!: 'http' | 'https' | 'socks5'
+  public ip!: string
+  public port?: string
+  public user?: string
+  public pass!: string
+}
