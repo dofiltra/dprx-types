@@ -309,4 +309,9 @@ export class ProxyItem {
   public pass?: string
   public dateEnd?: Date
   public version?: 4 | 6
+
+  public get url() {
+    const userpass = (this.user && this.pass && `${this.user}:${this.pass}@`) || ''
+    return `${this.type}://${userpass}${this.ip}:${this.port || ''}`
+  }
 }
