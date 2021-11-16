@@ -306,5 +306,6 @@ export class ProxyItem {
   public ip!: string
   public port?: string
   public user?: string
-  public pass!: string
+  public pass?: string
+  public dateEnd?: Date
 }
