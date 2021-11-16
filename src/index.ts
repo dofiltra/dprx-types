@@ -308,4 +308,5 @@ export class ProxyItem {
   public user?: string
   public pass?: string
   public dateEnd?: Date
+  public version?: 4 | 6
 }
