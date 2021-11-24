@@ -281,6 +281,13 @@ export enum RewriteTextTargetLang {
   EN = 0,
   RU = 1
 }
+export enum RewriteTextDataset {
+  Auto = 0,
+  News = 1,
+  Crypto = 2,
+  Finance = 3,
+  Medicine = 4
+}
 export enum RewriteTextBlockType {
   Unknown = 'unknow',
   Paragraph = 'paragraph',
