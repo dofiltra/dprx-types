@@ -290,7 +290,8 @@ export enum RewriteTextDataset {
 }
 
 export enum RewriteTextPower {
-  Light = 0,
+  Auto = 0,
+  Light = 1,
   Medium = 3,
   Hard = 9
 }
