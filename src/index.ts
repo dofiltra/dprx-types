@@ -289,7 +289,7 @@ export enum RewriteTextDataset {
   Medicine = 4
 }
 
-export enum RewriteTextLevel {
+export enum RewriteTextPower {
   Light = 0,
   Medium = 3,
   Hard = 9
