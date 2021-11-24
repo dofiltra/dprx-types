@@ -288,6 +288,12 @@ export enum RewriteTextDataset {
   Finance = 3,
   Medicine = 4
 }
+
+export enum RewriteTextLevel {
+  Light = 0,
+  Medium = 3,
+  Hard = 9
+}
 export enum RewriteTextBlockType {
   Unknown = 'unknow',
   Paragraph = 'paragraph',
