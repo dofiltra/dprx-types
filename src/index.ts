@@ -340,6 +340,5 @@ export class ProxyItem {
 }
 
 export class Balance {
-  public token!: string
   public coins!: number
 }
