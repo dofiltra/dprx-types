@@ -338,3 +338,8 @@ export class ProxyItem {
     return `${this.type}://${userpass}${this.ip}:${this.port || ''}`
   }
 }
+
+export class Balance {
+  public token!: string
+  public coins!: number
+}
