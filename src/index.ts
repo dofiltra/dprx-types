@@ -337,6 +337,14 @@ export class ProxyItem {
     const userpass = (this.user && this.pass && `${this.user}:${this.pass}@`) || ''
     return `${this.type}://${userpass}${this.ip}:${this.port || ''}`
   }
+
+  public get toPwrt() {
+    return {
+      server: `${this.type}://${this.ip}:${this.port}`,
+      username: this.user,
+      password: this.pass
+    }
+  }
 }
 
 export class Balance {
