@@ -330,6 +330,7 @@ export class ProxyItem {
   public port?: string
   public user?: string
   public pass?: string
+  public changeUrl?: string
   public dateEnd?: Date
   public version?: 4 | 6
 
