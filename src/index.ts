@@ -316,7 +316,7 @@ export enum RewriteTextBlockType {
 }
 
 export class ProxyItem {
-  constructor({ type, ip, port, user, pass, dateEnd, version }: ProxyItem) {
+  constructor({ type, ip, port, user, pass, dateEnd, version, changeUrl }: ProxyItem) {
     this.type = type
     this.ip = ip
     this.port = port
@@ -324,6 +324,7 @@ export class ProxyItem {
     this.pass = pass
     this.dateEnd = dateEnd
     this.version = version
+    this.changeUrl = changeUrl
   }
   public type!: 'http' | 'https' | 'socks5'
   public ip!: string
