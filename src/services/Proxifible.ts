@@ -1,6 +1,5 @@
 import _ from 'lodash'
-import { getFetchHap } from '../fetcher'
-import { ProxyItem } from '..'
+import { ProxyItem, getFetchHap } from '..'
 
 export type TFilterProxyOpts = {
   filterTypes?: ('http' | 'https' | 'socks5')[]
