@@ -1,3 +1,3 @@
-export * from './types'
-// export * from './fetcher'
-// export * from './services/Proxifible'
+export * from './models/dprx'
+export * from './fetcher'
+export * from './services/Proxifible'
