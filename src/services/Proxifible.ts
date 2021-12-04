@@ -22,7 +22,7 @@ export class Proxifible {
       await this.incProxy(selectedProxy.url())
       if (selectedProxy.changeUrl) {
         if ((selectedProxy.useCount || 0) >= this.limitPerProxy) {
-          await this.changeProxyIp(selectedProxy.changeUrl, selectedProxy.url())
+          await this.changeIp(selectedProxy.changeUrl, selectedProxy.url())
         }
       }
       return selectedProxy
@@ -42,7 +42,7 @@ export class Proxifible {
     }
   }
 
-  static async changeProxyIp(url: string, proxyUrl: string) {
+  static async changeIp(url: string, proxyUrl: string) {
     try {
       if (!url.startsWith('http')) {
         url = `http://${url}`
