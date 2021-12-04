@@ -1,3 +1,3 @@
-export * from './fetcher'
 export * from './types'
-export * from './services/Proxifible'
+// export * from './fetcher'
+// export * from './services/Proxifible'

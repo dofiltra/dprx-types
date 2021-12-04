@@ -1,5 +1,4 @@
-import fetchHap from 'make-fetch-happen'
-import { FetchOptions } from 'make-fetch-happen'
+import fetchHap, { FetchOptions } from 'make-fetch-happen'
 
 export const getFetchHap = async (opts?: FetchOptions) => {
   const {
