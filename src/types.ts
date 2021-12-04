@@ -355,3 +355,9 @@ export class Balance {
   public token!: string
   public coins!: number
 }
+
+export type TBatchBlock = {
+  blockId: string
+  rewriteDataSuggestions: any[]
+  rewritedCharsCount: number
+}
