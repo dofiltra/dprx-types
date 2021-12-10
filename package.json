@@ -42,6 +42,7 @@
     "lib/**/*"
   ],
   "dependencies": {
+    "dofiltra_api": "^1.1.32",
     "dotenv": "^10.0.0",
     "esm-requirer": "^1.0.3",
     "make-fetch-happen": "^9.1.0",

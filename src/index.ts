@@ -1,6 +1,7 @@
 /* tslint:disable:max-classes-per-file */
 import _ from 'lodash'
 import fetchHap, { FetchOptions } from 'make-fetch-happen'
+import { DoProxyApi } from 'dofiltra_api'
 
 export type TAppDprxSettings = {
   serverName?: string
@@ -366,6 +367,7 @@ export type TBatchBlock = {
 
 export type TFilterProxyOpts = {
   filterTypes?: ('http' | 'https' | 'socks5')[]
+  filterVersions?: (4 | 6 | undefined)[]
   sortBy?: ('useCount' | 'changeUrl')[]
 }
 
@@ -373,11 +375,30 @@ export class Proxifible {
   static proxies: ProxyItem[] = []
   static limitPerProxy = 1000
 
+  static async loadProxies() {
+    const { items: proxyItems4 } = await DoProxyApi.get(5e3, 4)
+    const { data: proxy4 = [] } = { ...proxyItems4 }
+
+    const { items: proxyItems6 } = await DoProxyApi.get(5e3, 6)
+    const { data: proxy6 = [] } = { ...proxyItems6 }
+
+    if (proxy4.length) {
+      this.proxies.push(...proxy4.map((p: ProxyItem) => new ProxyItem(p)))
+    }
+    if (proxy6.length) {
+      this.proxies.push(...proxy6.map((p: ProxyItem) => new ProxyItem(p)))
+    }
+  }
+
   static async getProxy(opts?: TFilterProxyOpts) {
-    const { filterTypes, sortBy = ['useCount'] } = { ...opts }
-    const sortProxies = _.sortBy(Proxifible.proxies, sortBy).filter(
-      (p) => !filterTypes?.length || filterTypes.includes(p.type)
-    )
+    if (!this.proxies?.length) {
+      await this.loadProxies()
+    }
+
+    const { filterTypes, filterVersions, sortBy = ['useCount'] } = { ...opts }
+    const sortProxies = _.sortBy(this.proxies, sortBy)
+      .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
+      .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
 
     const selectedProxy = sortProxies[0]
     if (selectedProxy) {
