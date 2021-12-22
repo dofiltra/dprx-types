@@ -281,8 +281,8 @@ export enum RewriteTextStatus {
   Completed = 9
 }
 export enum RewriteTextTargetLang {
-  EN = 0,
-  RU = 1
+  EN = "EN",
+  RU = "RU"
 }
 export enum RewriteTextDataset {
   Auto = 0,
@@ -472,3 +472,5 @@ export const getFetchHap = async (opts?: FetchOptions) => {
     headers
   })
 }
+
+export const NEWLINE = '▶' // 
