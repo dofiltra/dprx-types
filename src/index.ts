@@ -248,6 +248,8 @@ export class RewriteText {
   public targetLang!: string
   public status!: RewriteTextStatus
   public blocks?: RewriteTextBlock[]
+  public charsCount?: number
+  public power?: number
 }
 export class RewriteTextBlock {
   public id!: string
@@ -292,12 +294,6 @@ export enum RewriteTextDataset {
   Medicine = 4
 }
 
-export enum RewriteTextPower {
-  Auto = 0,
-  Light = 1,
-  Medium = 3,
-  Hard = 9
-}
 export enum RewriteTextBlockType {
   Unknown = 'unknow',
   Paragraph = 'paragraph',
