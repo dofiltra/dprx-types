@@ -294,6 +294,14 @@ export enum RewriteTextDataset {
   Medicine = 4
 }
 
+export enum RewriteMode {
+  Rewrite = 'REWRITE',
+  Longer = 'LONGER',
+  Shorten = 'SHORTER',
+  Formal = 'FORMAL',
+  Casual = 'CASUAL'
+}
+
 export enum RewriteTextBlockType {
   Unknown = 'unknow',
   Paragraph = 'paragraph',

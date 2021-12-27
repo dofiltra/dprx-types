@@ -71,10 +71,10 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^17.0.2":
-  version "17.0.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.2.tgz#a4c07d47ff737e8ee7e586fe636ff0e1ddff070a"
-  integrity sha512-JepeIUPFDARgIs0zD/SKPgFsJEAF0X5/qO80llx59gOxFTboS9Amv3S+QfB7lqBId5sFXJ99BN0J6zFRvL9dDA==
+"@types/node@*", "@types/node@^17.0.5":
+  version "17.0.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.5.tgz#57ca67ec4e57ad9e4ef5a6bab48a15387a1c83e0"
+  integrity sha512-w3mrvNXLeDYV1GKTZorGJQivK6XLCoGwpnyJFbJVK/aTBQUxOCaa/GlFAAN3OTDFcb7h5tiFG+YXCO2By+riZw==
 
 "@types/retry@*":
   version "0.12.1"
@@ -248,7 +248,7 @@ diff@^4.0.1:
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
-dofiltra_api@^1.1.32, dofiltra_api@^1.1.38:
+dofiltra_api@^1.1.38:
   version "1.1.38"
   resolved "https://registry.yarnpkg.com/dofiltra_api/-/dofiltra_api-1.1.38.tgz#9346065cf592f5a50d2c9f962e3960c3a7ea9c11"
   integrity sha512-G52Y2/BGOAGsEiH6MNNAr+LY1SlEL2Z9/hanIxYD+IzI27WkEp9SmCuqubZGEft+TqpT5DoAEpKLpWR9U5MBOA==
@@ -268,11 +268,11 @@ dotenv@^10.0.0:
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 dprx-types@^1.1.10:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/dprx-types/-/dprx-types-1.1.10.tgz#624477fd5877d3730fc8cb9d311030b60f62679f"
-  integrity sha512-OWHk3nLfBSmE7P/zpFnrT1Ywnmasp9FP4mVfVv183fKo78WmlTL31Q6C6j46vM21z99BCXRLRnYvBWYdUMAtJw==
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/dprx-types/-/dprx-types-1.1.13.tgz#0b49a34e04709c4ccf904423a42e3784eb128402"
+  integrity sha512-v0EkRH6lMbACR9+zVuTEt1o/aVEzql2KNAgGqlF32hkv1GPBDEFYZ9Yda8laGKyc5lyJUIMTtldM8ycL7KHPQQ==
   dependencies:
-    dofiltra_api "^1.1.32"
+    dofiltra_api "^1.1.38"
     dotenv "^10.0.0"
     esm-requirer "^1.0.3"
     make-fetch-happen "^9.1.0"
