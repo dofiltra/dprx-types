@@ -282,10 +282,10 @@ export enum RewriteTextStatus {
   InProgress = 3,
   Completed = 9
 }
-export enum RewriteTextTargetLang {
-  EN = 'EN',
-  RU = 'RU'
-}
+// export enum RewriteTextTargetLang {
+//   EN = 'EN',
+//   RU = 'RU'
+// }
 export enum RewriteTextDataset {
   Auto = 0,
   News = 1,
