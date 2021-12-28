@@ -297,7 +297,7 @@ export enum RewriteTextDataset {
 export enum RewriteMode {
   Rewrite = 'REWRITE',
   Longer = 'LONGER',
-  Shorten = 'SHORTER',
+  Shorter = 'SHORTER',
   Formal = 'FORMAL',
   Casual = 'CASUAL'
 }
