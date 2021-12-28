@@ -250,7 +250,10 @@ export class RewriteText {
   public blocks?: RewriteTextBlock[]
   public charsCount?: number
   public power?: number
+  public expand?: RewriteMode.Longer | RewriteMode.Shorter
+  public tone?: RewriteMode.Formal | RewriteMode.Casual
 }
+
 export class RewriteTextBlock {
   public id!: string
   public type!: string
