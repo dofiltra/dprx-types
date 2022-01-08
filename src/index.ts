@@ -375,6 +375,7 @@ export type TFilterProxyOpts = {
   filterTypes?: ('http' | 'https' | 'socks5')[]
   filterVersions?: (4 | 6 | undefined)[]
   sortBy?: ('useCount' | 'changeUrl')[]
+  sortOrder?: ('asc' | 'desc')[]
 }
 
 export class Proxifible {
@@ -403,8 +404,8 @@ export class Proxifible {
       await this.loadProxies()
     }
 
-    const { filterTypes, filterVersions, sortBy = ['useCount'] } = { ...opts }
-    const sortProxies = _.sortBy(this.proxies, sortBy)
+    const { filterTypes, filterVersions, sortBy = ['useCount'], sortOrder = ['asc'] } = { ...opts }
+    const sortProxies = _.sortBy(this.proxies, sortBy, sortOrder)
       .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
       .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
 
