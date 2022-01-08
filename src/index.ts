@@ -405,7 +405,7 @@ export class Proxifible {
     }
 
     const { filterTypes, filterVersions, sortBy = ['useCount'], sortOrder = ['asc'] } = { ...opts }
-    const sortProxies = _.sortBy(this.proxies, sortBy, sortOrder)
+    const sortProxies = _.orderBy(this.proxies, sortBy, sortOrder)
       .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
       .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
 
