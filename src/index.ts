@@ -417,28 +417,36 @@ export class Proxifible {
     this.proxies = _.uniqBy(this.proxies, (e) => e.url())
   }
 
-  static async getProxy(opts?: TFilterProxyOpts) {
+  static async getProxies(opts: TFilterProxyOpts, count: number) {
     if (!this.proxies?.length) {
       await this.loadProxies()
     }
-
     const { filterTypes, filterVersions = [4, 6], sortBy = ['useCount'], sortOrder = ['asc'] } = { ...opts }
     const sortProxies = _.orderBy(this.proxies, sortBy, sortOrder)
       .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
       .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
+      .slice(0, count)
 
-    const selectedProxy = sortProxies[0]
-    if (selectedProxy) {
-      await this.changeUseCountProxy(selectedProxy.url())
-      if (selectedProxy.changeUrl) {
-        if ((selectedProxy.useCount || 0) >= this.limitPerProxy) {
-          await this.changeIp(selectedProxy.changeUrl, selectedProxy.url())
+    await Promise.all(
+      sortProxies.map(async (selectedProxy) => {
+        await this.changeUseCountProxy(selectedProxy.url())
+        if (selectedProxy.changeUrl) {
+          if ((selectedProxy.useCount || 0) >= this.limitPerProxy) {
+            await this.changeIp(selectedProxy.changeUrl, selectedProxy.url())
+          }
         }
-      }
-      return selectedProxy
-    }
+        return selectedProxy
+      })
+    )
 
-    return
+    return sortProxies
+  }
+
+  static async getProxy(opts: TFilterProxyOpts) {
+    const sortProxies = await this.getProxies(opts, 1)
+    const selectedProxy = sortProxies[0]
+
+    return selectedProxy
   }
 
   static async changeUseCountProxy(proxyUrl?: string, inc = 1) {
