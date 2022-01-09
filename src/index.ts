@@ -285,10 +285,32 @@ export enum RewriteTextStatus {
   InProgress = 3,
   Completed = 9
 }
-// export enum RewriteTextTargetLang {
-//   EN = 'EN',
-//   RU = 'RU'
-// }
+export enum LangCode {
+  English = 'EN',
+  Russian = 'RU',
+  Bulgarian = 'BG',
+  Chinese = 'ZH',
+  Czech = 'CS',
+  Danish = 'DA',
+  Dutch = 'NL',
+  Estonian = 'ET',
+  Finnish = 'FI',
+  French = 'FR',
+  German = 'DE',
+  Greek = 'EL',
+  Hungarian = 'HU',
+  Italian = 'IT',
+  Japanese = 'JA',
+  Latvian = 'LV',
+  Lithuanian = 'LT',
+  Polish = 'PL',
+  Portuguese = 'PT',
+  Romanian = 'RO',
+  Slovak = 'SK',
+  Slovenian = 'SL',
+  Spanish = 'ES',
+  Swedish = 'SV'
+}
 export enum RewriteTextDataset {
   Auto = 0,
   News = 1,
@@ -389,12 +411,8 @@ export class Proxifible {
     const { items: proxyItems6 } = await DoProxyApi.get(5e3, 6)
     const { data: proxy6 = [] } = { ...proxyItems6 }
 
-    if (proxy4.length) {
-      this.proxies.push(...proxy4.map((p: ProxyItem) => new ProxyItem(p)))
-    }
-    if (proxy6.length) {
-      this.proxies.push(...proxy6.map((p: ProxyItem) => new ProxyItem(p)))
-    }
+    this.proxies.push(...proxy4?.map((p: ProxyItem) => new ProxyItem(p)))
+    this.proxies.push(...proxy6?.map((p: ProxyItem) => new ProxyItem(p)))
 
     this.proxies = _.uniqBy(this.proxies, 'ip')
   }
@@ -404,7 +422,7 @@ export class Proxifible {
       await this.loadProxies()
     }
 
-    const { filterTypes, filterVersions, sortBy = ['useCount'], sortOrder = ['asc'] } = { ...opts }
+    const { filterTypes, filterVersions = [4, 6], sortBy = ['useCount'], sortOrder = ['asc'] } = { ...opts }
     const sortProxies = _.orderBy(this.proxies, sortBy, sortOrder)
       .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
       .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
