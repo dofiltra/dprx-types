@@ -414,7 +414,7 @@ export class Proxifible {
     this.proxies.push(...proxy4?.map((p: ProxyItem) => new ProxyItem(p)))
     this.proxies.push(...proxy6?.map((p: ProxyItem) => new ProxyItem(p)))
 
-    this.proxies = _.uniqBy(this.proxies, 'ip')
+    this.proxies = _.uniqBy(this.proxies, (e) => e.url())
   }
 
   static async getProxy(opts?: TFilterProxyOpts) {
