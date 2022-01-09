@@ -245,7 +245,7 @@ export class RewritePage {
 }
 
 export class RewriteText {
-  public targetLang!: string
+  public targetLang!: LangCode
   public status!: RewriteTextStatus
   public blocks?: RewriteTextBlock[]
   public charsCount?: number
