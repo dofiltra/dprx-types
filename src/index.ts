@@ -398,6 +398,7 @@ export type TFilterProxyOpts = {
   filterVersions?: (4 | 6 | undefined)[]
   sortBy?: ('useCount' | 'changeUrl')[]
   sortOrder?: ('asc' | 'desc')[]
+  forceChangeIp?: boolean
 }
 
 export class Proxifible {
@@ -421,7 +422,13 @@ export class Proxifible {
     if (!this.proxies?.length) {
       await this.loadProxies()
     }
-    const { filterTypes, filterVersions = [4, 6], sortBy = ['useCount'], sortOrder = ['asc'] } = { ...opts }
+    const {
+      filterTypes,
+      filterVersions = [4, 6],
+      sortBy = ['useCount'],
+      sortOrder = ['asc'],
+      forceChangeIp = false
+    } = { ...opts }
     const sortProxies = _.orderBy(this.proxies, sortBy, sortOrder)
       .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
       .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
@@ -431,7 +438,7 @@ export class Proxifible {
       sortProxies.map(async (selectedProxy) => {
         await this.changeUseCountProxy(selectedProxy.url())
         if (selectedProxy.changeUrl) {
-          if ((selectedProxy.useCount || 0) >= this.limitPerProxy) {
+          if (forceChangeIp || (selectedProxy.useCount || 0) >= this.limitPerProxy) {
             await this.changeIp(selectedProxy.changeUrl, selectedProxy.url())
           }
         }
