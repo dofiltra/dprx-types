@@ -1,7 +1,5 @@
 /* tslint:disable:max-classes-per-file */
 import _ from 'lodash'
-import fetchHap, { FetchOptions } from 'make-fetch-happen'
-import { DoProxyApi } from 'dofiltra_api'
 
 export type TAppDprxSettings = {
   serverName?: string
@@ -399,121 +397,6 @@ export type TFilterProxyOpts = {
   sortBy?: ('useCount' | 'changeUrl')[]
   sortOrder?: ('asc' | 'desc')[]
   forceChangeIp?: boolean
-}
-
-export class Proxifible {
-  static proxies: ProxyItem[] = []
-  static limitPerProxy = 1000
-
-  static async loadProxies() {
-    const { items: proxyItems4 } = await DoProxyApi.get(5e3, 4)
-    const { data: proxy4 = [] } = { ...proxyItems4 }
-
-    const { items: proxyItems6 } = await DoProxyApi.get(5e3, 6)
-    const { data: proxy6 = [] } = { ...proxyItems6 }
-
-    this.proxies.push(...proxy4?.map((p: ProxyItem) => new ProxyItem(p)))
-    this.proxies.push(...proxy6?.map((p: ProxyItem) => new ProxyItem(p)))
-
-    this.proxies = _.uniqBy(this.proxies, (e) => e.url())
-  }
-
-  static async getProxies(opts: TFilterProxyOpts, count: number) {
-    if (!this.proxies?.length) {
-      await this.loadProxies()
-    }
-    const {
-      filterTypes,
-      filterVersions = [4, 6],
-      sortBy = ['useCount'],
-      sortOrder = ['asc'],
-      forceChangeIp = false
-    } = { ...opts }
-    const sortProxies = _.orderBy(this.proxies, sortBy, sortOrder)
-      .filter((p) => !filterTypes?.length || filterTypes.includes(p.type))
-      .filter((p) => !filterVersions?.length || filterVersions.includes(p.version))
-      .slice(0, count)
-
-    await Promise.all(
-      sortProxies.map(async (selectedProxy) => {
-        await this.changeUseCountProxy(selectedProxy.url())
-        if (selectedProxy.changeUrl) {
-          if (forceChangeIp || (selectedProxy.useCount || 0) >= this.limitPerProxy) {
-            await this.changeIp(selectedProxy.changeUrl, selectedProxy.url())
-          }
-        }
-        return selectedProxy
-      })
-    )
-
-    return sortProxies
-  }
-
-  static async getProxy(opts: TFilterProxyOpts) {
-    const sortProxies = await this.getProxies(opts, 1)
-    const selectedProxy = sortProxies[0]
-
-    return selectedProxy
-  }
-
-  static async changeUseCountProxy(proxyUrl?: string, inc = 1) {
-    if (!proxyUrl) {
-      return
-    }
-
-    try {
-      const index = this.proxies.findIndex((p) => p.url() === proxyUrl)
-      if (index > -1) {
-        if (inc === -this.limitPerProxy) {
-          this.proxies[index].useCount = 0
-        } else {
-          this.proxies[index]!.useCount = (this.proxies[index]!.useCount || 0) + inc
-        }
-      }
-    } catch (error: any) {
-      //
-    }
-  }
-
-  static async changeIp(url: string, proxyUrl: string) {
-    try {
-      if (!url.startsWith('http')) {
-        url = `http://${url}`
-      }
-      const fh = await getFetchHap()
-      const resp = await fh(url, {
-        headers: {
-          'cache-control': 'no-cache',
-          'content-type': 'application/json'
-        },
-        method: 'GET',
-        timeout: 60e3
-      })
-      this.changeUseCountProxy(proxyUrl, -this.limitPerProxy)
-
-      return { result: await resp.json() }
-    } catch (error: any) {
-      return { error }
-    }
-  }
-}
-
-export const getFetchHap = async (opts?: FetchOptions) => {
-  const {
-    headers = {
-      'User-Agent':
-        'Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3'
-    },
-    compress = true
-  } = { ...opts }
-
-  return fetchHap.defaults({
-    // cachePath: './node_modules/.fetch-cache',
-    timeout: 30e3,
-    ...opts,
-    compress,
-    headers
-  })
 }
 
 export const NEWLINE = '▶' //
