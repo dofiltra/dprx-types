@@ -402,7 +402,6 @@ export type TFilterProxyOpts = {
   forceChangeIp?: boolean
 }
 
-
 export class Dotranslate {
   public token!: string
   public langs!: LangCode[]
