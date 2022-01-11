@@ -391,7 +391,8 @@ export class Balance {
 
 export type TBatchBlock = {
   blockId: string
-  rewriteDataSuggestions: any[]
+  rewriteDataSuggestions?: BlockData[]
+  results?: { [langCode: string]: BlockData }
 }
 
 export type TFilterProxyOpts = {
