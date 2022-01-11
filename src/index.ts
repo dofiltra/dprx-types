@@ -1,6 +1,8 @@
 /* tslint:disable:max-classes-per-file */
 import _ from 'lodash'
 
+export const NEWLINE = '▶'
+
 export type TAppDprxSettings = {
   serverName?: string
   token?: string
@@ -244,22 +246,23 @@ export class RewritePage {
 
 export class RewriteText {
   public targetLang!: LangCode
-  public status!: RewriteTextStatus
-  public blocks?: RewriteTextBlock[]
+  public status!: TaskStatus
+  public blocks?: BlockContent[]
   public charsCount?: number
   public power?: number
   public expand?: RewriteMode.Longer | RewriteMode.Shorter
   public tone?: RewriteMode.Formal | RewriteMode.Casual
 }
 
-export class RewriteTextBlock {
+export class BlockContent {
   public id!: string
   public type!: string
-  public data!: RewriteTextBlockData
-  public rewriteDataSuggestions?: RewriteTextBlockData[]
+  public data!: BlockData
+  public rewriteDataSuggestions?: BlockData[]
+  public results?: { [langCode: string]: BlockData }
 }
 
-export class RewriteTextBlockData {
+export class BlockData {
   public text?: string
   public level?: number
   public caption?: string
@@ -278,7 +281,7 @@ export class RewriteTextBlockData {
   public withBorder?: boolean
   public stretched?: boolean
 }
-export enum RewriteTextStatus {
+export enum TaskStatus {
   NotStarted = 0,
   InProgress = 3,
   Completed = 9
@@ -325,7 +328,7 @@ export enum RewriteMode {
   Casual = 'CASUAL'
 }
 
-export enum RewriteTextBlockType {
+export enum BlockType {
   Unknown = 'unknow',
   Paragraph = 'paragraph',
   Image = 'image',
@@ -399,4 +402,12 @@ export type TFilterProxyOpts = {
   forceChangeIp?: boolean
 }
 
-export const NEWLINE = '▶' //
+
+export class Dotranslate {
+  public token!: string
+  public langs!: LangCode[]
+  public blocks!: BlockContent[]
+  public status!: TaskStatus
+  public charsCount!: number
+  public tone?: RewriteMode.Formal | RewriteMode.Casual
+}
