@@ -250,6 +250,7 @@ export class RewritePage {
 }
 
 export class RewriteText {
+  public token!: string
   public targetLang!: LangCode
   public status!: TaskStatus
   public blocks?: BlockContent[]
