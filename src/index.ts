@@ -3,6 +3,11 @@ import _ from 'lodash'
 
 export const NEWLINE = '▶'
 
+export const headers = {
+  Accept: 'application/json',
+  'Content-Type': 'application/json'
+}
+
 export type TAppDprxSettings = {
   serverName?: string
   token?: string
