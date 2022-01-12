@@ -258,6 +258,7 @@ export class RewriteText {
   public power?: number
   public expand?: RewriteMode.Longer | RewriteMode.Shorter
   public tone?: RewriteMode.Formal | RewriteMode.Casual
+  public dataset?: Dataset
 }
 
 export class BlockContent {
@@ -318,7 +319,7 @@ export enum LangCode {
   Spanish = 'ES',
   Swedish = 'SV'
 }
-export enum RewriteTextDataset {
+export enum Dataset {
   Auto = 0,
   News = 1,
   Crypto = 2,
