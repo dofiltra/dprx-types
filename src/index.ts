@@ -413,6 +413,7 @@ export type TFilterProxyOpts = {
 export class Dotranslate {
   public token!: string
   public status!: TaskStatus
+
   public langs!: LangCode[]
   public blocks!: BlockContent[]
   public charsCount!: number
@@ -422,5 +423,25 @@ export class Dotranslate {
 export class Doextractor {
   public token!: string
   public status!: TaskStatus
-  public group!: string[]
+
+  public keywords?: string[]
+  public urls?: string[]
+
+  public results?: { [url: string]: DoreadData }
+}
+
+export class DoreadData {
+  public url!: string
+  public title?: string
+  public description?: string
+  public content?: string
+  public thumb?: string
+
+  public pageType?: string
+  public locale?: string
+  public byline?: string
+  public dir?: string
+  public textContent?: string
+  public length?: number
+  public siteName?: string
 }
