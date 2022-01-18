@@ -412,9 +412,15 @@ export type TFilterProxyOpts = {
 
 export class Dotranslate {
   public token!: string
+  public status!: TaskStatus
   public langs!: LangCode[]
   public blocks!: BlockContent[]
-  public status!: TaskStatus
   public charsCount!: number
   public tone?: RewriteMode.Formal | RewriteMode.Casual
+}
+
+export class Doextractor {
+  public token!: string
+  public status!: TaskStatus
+  public group!: string[]
 }
