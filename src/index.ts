@@ -427,11 +427,12 @@ export class Doextractor {
   public keywords?: string[]
   public urls?: string[]
 
-  public results?: { [url: string]: DoreadData }
+  public results?: DoreadData[]
+  public union?: DoreadData
 }
 
 export class DoreadData {
-  public url!: string
+  public url?: string
   public title?: string
   public description?: string
   public content?: string
