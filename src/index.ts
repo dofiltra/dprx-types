@@ -356,7 +356,8 @@ export enum BlockType {
 }
 
 export class ProxyItem {
-  constructor({ type, ip, port, user, pass, dateEnd, version, changeUrl, useCount }: ProxyItem) {
+  constructor({ _id, type, ip, port, user, pass, dateEnd, version, changeUrl, useCount }: ProxyItem) {
+    this._id = _id
     this.type = type
     this.ip = ip
     this.port = port
@@ -367,6 +368,7 @@ export class ProxyItem {
     this.changeUrl = changeUrl
     this.useCount = useCount || 0
   }
+  public _id?: string
   public type!: 'http' | 'https' | 'socks5'
   public ip!: string
   public port?: string
