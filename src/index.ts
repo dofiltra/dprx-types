@@ -472,3 +472,7 @@ export class AnalItem {
 
   public url?: string
 }
+
+export enum SocketEvent {
+  AnalCreateBulk = 'anal.createBulk'
+}
