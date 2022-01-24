@@ -448,3 +448,27 @@ export class DoreadData {
   public length?: number
   public siteName?: string
 }
+
+export enum AnalType {
+  Title = 'TITLE',
+  H1 = 'H1',
+  H2 = 'H2',
+  Descr = 'DESCR',
+  Keywords = 'KEYWORDS'
+}
+
+export class AnalSuggestImprove {
+  public value!: string
+
+  public rate!: number
+}
+
+export class AnalItem {
+  public type!: AnalType
+
+  public value!: string
+
+  public suggestImproves?: AnalSuggestImprove[]
+
+  public url?: string
+}
