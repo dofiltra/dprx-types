@@ -474,5 +474,16 @@ export class AnalItem {
 }
 
 export enum SocketEvent {
-  AnalCreateBulk = 'anal.createBulk'
+  Join = 'join',
+  Disconnect = 'disconnect',
+
+  AnalCreateBulk = 'anal.createBulk',
+
+  OdmStats = 'odm.stats',
+
+  AibackSetData = 'aiback.setData',
+  AibackUpdate = 'aiback.update',
+  AibackExecute = 'execute',
+  AibackLoadProxies = 'loadProxies',
+  AibackLoadedProxies = 'loadedProxies'
 }
