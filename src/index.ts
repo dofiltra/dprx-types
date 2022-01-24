@@ -474,8 +474,9 @@ export class AnalItem {
 }
 
 export enum SocketEvent {
-  Join = 'join',
+  Connect = 'connect',
   Disconnect = 'disconnect',
+  Join = 'join',
 
   AnalCreateBulk = 'anal.createBulk',
 
