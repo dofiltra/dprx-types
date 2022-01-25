@@ -480,12 +480,15 @@ export enum SocketEvent {
   Join = 'join',
 
   AnalCreateBulk = 'anal.createBulk',
-
   OdmStats = 'odm.stats',
 
   AibackSetData = 'aiback.setData',
   AibackUpdate = 'aiback.update',
   AibackExecute = 'execute',
   AibackLoadProxies = 'loadProxies',
-  AibackLoadedProxies = 'loadedProxies'
+  AibackLoadedProxies = 'loadedProxies',
+
+  RewriteTextStop = 'rewritetext.stop',
+  TranslateStop = 'translate.stop',
+  ExtractorStop = 'extractor.stop'
 }
