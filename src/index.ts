@@ -488,7 +488,12 @@ export enum SocketEvent {
   AibackLoadProxies = 'loadProxies',
   AibackLoadedProxies = 'loadedProxies',
 
+  RewritePrefix = 'rewritetext_',
   RewriteTextStop = 'rewritetext.stop',
+
+  TranslatePrefix = 'translate_',
   TranslateStop = 'translate.stop',
+
+  ExtractorPrefix = 'extractor_',
   ExtractorStop = 'extractor.stop'
 }
