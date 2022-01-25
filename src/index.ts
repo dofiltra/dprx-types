@@ -475,6 +475,7 @@ export class AnalItem {
 
 export enum SocketEvent {
   Connect = 'connect',
+  Connection = 'connection',
   Disconnect = 'disconnect',
   Join = 'join',
 
