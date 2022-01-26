@@ -447,6 +447,8 @@ export class DoreadData {
   public textContent?: string
   public length?: number
   public siteName?: string
+
+  public originalHtml?: string
 }
 
 export enum AnalType {
