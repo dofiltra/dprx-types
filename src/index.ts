@@ -426,8 +426,9 @@ export class Doextractor {
   public token!: string
   public status!: TaskStatus
 
-  public keywords?: string[]
-  public urls?: string[]
+  public urlsOrKeys!: string[]
+  // public keywords?: string[]
+  // public urls?: string[]
 
   public results?: DoreadData[]
   public union?: DoreadData
