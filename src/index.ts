@@ -422,12 +422,40 @@ export class Dotranslate {
   public tone?: RewriteMode.Formal | RewriteMode.Casual
 }
 
+export type TExtrSimilarOpts = {
+  coefRemoveHeading?: number
+  coefRemoveContent?: number
+}
+
+export type TExtrContentOpts = {
+  limitContent?: number
+  canShuffleBlocks?: boolean
+}
+
+export type TExtrVideosOpts = {}
+
+export type TExtrTypographOpts = {
+  replaceTags?: { [tagName: string]: [replaceTagName: string] } // { 'a': 'span' }
+
+  removeSelectors?: { [selector: string]: boolean } // { 'blockquote': true, 'script': true }
+  removeAttrs?: { [selector: string]: [attrs: string[]] } // { 'a[href]': ['href', 'onload'] }
+}
+
+export type TExtrRewriteOpts = {}
+
+export type TExtrTranslateOpts = {}
+
 export class Doextractor {
   public token!: string
   public status!: TaskStatus
-
   public urlsOrKeys!: string[]
-  public limitContent!: number
+
+  public similarOpts?: TExtrSimilarOpts
+  public contentOpts?: TExtrContentOpts
+  public videosOpts?: TExtrVideosOpts
+  public typographOpts?: TExtrTypographOpts
+  public rewriteOpts?: TExtrRewriteOpts
+  public translateOpts?: TExtrTranslateOpts
 
   public results?: DoreadData[]
   public union?: DoreadData
