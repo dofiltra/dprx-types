@@ -435,10 +435,10 @@ export type TExtrContentOpts = {
 export type TExtrVideosOpts = {}
 
 export type TExtrTypographOpts = {
-  replaceTags?: { [tagName: string]: [replaceTagName: string] } // { 'a': 'span' }
+  replaceTags?: { [tagName: string]: string } // { 'a': 'span' }
 
   removeSelectors?: { [selector: string]: boolean } // { 'blockquote': true, 'script': true }
-  removeAttrs?: { [selector: string]: [attrs: string[]] } // { 'a[href]': ['href', 'onload'] }
+  removeAttrs?: { [selector: string]: string[] } // { 'a[href]': ['href', 'onload'] }
 }
 
 export type TExtrRewriteOpts = {}
