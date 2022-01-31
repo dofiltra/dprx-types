@@ -441,7 +441,11 @@ export type TExtrTypographOpts = {
   removeAttrs?: { [selector: string]: string[] } // { 'a[href]': ['href', 'onload'] }
 }
 
-export type TExtrRewriteOpts = {}
+export type TExtrRewriteOpts = {
+  power?: number
+  expand?: RewriteMode.Longer | RewriteMode.Shorter
+  tone?: RewriteMode.Formal | RewriteMode.Casual
+}
 
 export type TExtrTranslateOpts = {}
 
