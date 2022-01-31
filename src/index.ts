@@ -454,7 +454,7 @@ export class Doextractor {
   public status!: TaskStatus
   public urlsOrKeys!: string[]
 
-  public similarOpts?: TExtrSimilarOpts
+  public duplicateOpts?: TExtrSimilarOpts
   public contentOpts?: TExtrContentOpts
   public videosOpts?: TExtrVideosOpts
   public typographOpts?: TExtrTypographOpts
