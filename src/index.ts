@@ -422,7 +422,7 @@ export class Dotranslate {
   public tone?: RewriteMode.Formal | RewriteMode.Casual
 }
 
-export type TExtrSimilarOpts = {
+export type TExtrDuplicateOpts = {
   coefRemoveHeading?: number
   coefRemoveContent?: number
 }
@@ -454,7 +454,7 @@ export class Doextractor {
   public status!: TaskStatus
   public urlsOrKeys!: string[]
 
-  public duplicateOpts?: TExtrSimilarOpts
+  public duplicateOpts?: TExtrDuplicateOpts
   public contentOpts?: TExtrContentOpts
   public videosOpts?: TExtrVideosOpts
   public typographOpts?: TExtrTypographOpts
