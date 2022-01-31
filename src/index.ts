@@ -429,7 +429,7 @@ export type TExtrSimilarOpts = {
 
 export type TExtrContentOpts = {
   limitContent?: number
-  canShuffleBlocks?: boolean
+  coefShuffleBlocks?: number
 }
 
 export type TExtrVideosOpts = {}
