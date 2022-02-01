@@ -449,7 +449,7 @@ export type TExtrRewriteOpts = {
 }
 
 export type TExtrTranslateOpts = {
-  langs?: LangCode[]
+  lang?: LangCode
   selectors?: string[] // ['p']
 }
 
