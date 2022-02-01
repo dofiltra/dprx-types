@@ -437,7 +437,7 @@ export type TExtrVideosOpts = {}
 export type TExtrTypographOpts = {
   replaceTags?: { [tagName: string]: string } // { 'a': 'span' }
 
-  removeSelectors?: { [selector: string]: boolean } // { 'blockquote': true, 'script': true }
+  removeSelectors?: string[] // ['blockquote', 'script']
   removeAttrs?: { [selector: string]: string[] } // { 'a[href]': ['href', 'onload'] }
 }
 
@@ -445,9 +445,13 @@ export type TExtrRewriteOpts = {
   power?: number
   expand?: RewriteMode.Longer | RewriteMode.Shorter
   tone?: RewriteMode.Formal | RewriteMode.Casual
+  selectors?: string[] // ['p']
 }
 
-export type TExtrTranslateOpts = {}
+export type TExtrTranslateOpts = {
+  langs?: LangCode[]
+  selectors?: string[] // ['p']
+}
 
 export class Doextractor {
   public token!: string
