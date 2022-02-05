@@ -530,7 +530,7 @@ export enum SocketEvent {
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
-  ExtractorPrefix = 'extractor_',
+  ExtractorPrefix = 'extractor_'
 }
 
 export enum ModuleName {
