@@ -525,6 +525,7 @@ export enum SocketEvent {
   AibackExecute = 'execute',
   AibackLoadProxies = 'loadProxies',
   AibackLoadedProxies = 'loadedProxies',
+  AibackSyncContainers = 'aiback.sync',
 
   RewritePrefix = 'rewritetext_',
   RewriteTextStop = 'rewritetext.stop',
