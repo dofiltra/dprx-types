@@ -529,13 +529,8 @@ export enum SocketEvent {
   AibackStopContainer = 'aiback.stopContainer',
 
   RewritePrefix = 'rewritetext_',
-  RewriteTextStop = 'rewritetext.stop',
-
   TranslatePrefix = 'translate_',
-  TranslateStop = 'translate.stop',
-
   ExtractorPrefix = 'extractor_',
-  ExtractorStop = 'extractor.stop'
 }
 
 export enum ModuleName {
