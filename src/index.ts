@@ -536,3 +536,9 @@ export enum SocketEvent {
   ExtractorPrefix = 'extractor_',
   ExtractorStop = 'extractor.stop'
 }
+
+export enum ModuleName {
+  Rewriter = 'rewriter',
+  Translator = 'translator',
+  Extractor = 'extractor'
+}
