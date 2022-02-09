@@ -410,6 +410,7 @@ export type TFilterProxyOpts = {
   sortBy?: ('useCount' | 'changeUrl')[]
   sortOrder?: ('asc' | 'desc')[]
   forceChangeIp?: boolean
+  maxUseCount?: number
 }
 
 export class Dotranslate {
