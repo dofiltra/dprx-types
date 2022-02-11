@@ -524,6 +524,7 @@ export enum SocketEvent {
   AibackSetData = 'aiback.setData',
   AibackUpdate = 'aiback.update',
   AibackExecute = 'execute',
+  AibackRestartApp = 'aiback.restartApp',
   AibackLoadProxies = 'loadProxies',
   AibackLoadedProxies = 'loadedProxies',
   AibackSyncContainer = 'aiback.syncContainer',
