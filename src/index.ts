@@ -535,6 +535,10 @@ export enum SocketEvent {
   ExtractorPrefix = 'extractor_'
 }
 
+export enum SocketRoom {
+  Aiback = 'aiback'
+}
+
 export enum ModuleName {
   Rewriter = 'rewriter',
   Translator = 'translator',
