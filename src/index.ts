@@ -545,3 +545,9 @@ export enum ModuleName {
   Translator = 'translator',
   Extractor = 'extractor'
 }
+
+export enum AppState {
+  Active = 'active',
+  Pause = 'pause',
+  SoftPause = 'softpause'
+}
