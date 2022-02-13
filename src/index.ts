@@ -530,6 +530,7 @@ export enum SocketEvent {
   AibackLoadedProxies = 'loadedProxies',
   AibackSyncContainer = 'aiback.syncContainer',
   AibackStopContainer = 'aiback.stopContainer',
+  AibackState = 'aiback.state',
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
