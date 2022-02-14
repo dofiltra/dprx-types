@@ -523,6 +523,7 @@ export enum SocketEvent {
 
   AibackSetData = 'aiback.setData',
   AibackUpdate = 'aiback.update',
+  AibackUpdateBatch = 'aiback.updateBatch',
   AibackExecute = 'execute',
   AibackRestartApp = 'aiback.restartApp',
   AibackReloadProxies = 'aiback.reloadProxies',
