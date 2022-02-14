@@ -402,7 +402,6 @@ export type TBatchBlock = {
   blockId: string
   rewriteDataSuggestions?: BlockData[]
   results?: { [langCode: string]: BlockData }
-  moduleName?: ModuleName
 }
 
 export type TFilterProxyOpts = {
