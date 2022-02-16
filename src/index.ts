@@ -520,6 +520,7 @@ export enum SocketEvent {
 
   AnalCreateBulk = 'anal.createBulk',
   OdmStats = 'odm.stats',
+  SendQueue = 'web.sendQueue',
 
   AibackSetData = 'aiback.setData',
   AibackUpdate = 'aiback.update',
@@ -533,7 +534,6 @@ export enum SocketEvent {
   AibackStopContainer = 'aiback.stopContainer',
   AibackState = 'aiback.state',
   AibackRefresh = 'aiback.refresh',
-  AibackSendQueue = 'aiback.sendQueue',
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
