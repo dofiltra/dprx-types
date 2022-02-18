@@ -522,6 +522,7 @@ export enum SocketEvent {
   OdmStats = 'odm.stats',
   SendQueue = 'web.sendQueue',
 
+  AibackLoadSettings = 'aiback.loadSettings',
   AibackSetData = 'aiback.setData',
   AibackUpdate = 'aiback.update',
   AibackUpdateBatch = 'aiback.updateBatch',
@@ -558,9 +559,7 @@ export enum AppState {
 
 export class AibackSettings {
   public serverName!: string
-
   public threadsCount!: number
-
   public headless!: boolean
 
   public xmlkey!: string
@@ -569,6 +568,5 @@ export class AibackSettings {
   public wtntoken!: string
 
   public limitCpu!: number
-
   public limitRam!: number
 }
