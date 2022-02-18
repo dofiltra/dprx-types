@@ -555,3 +555,20 @@ export enum AppState {
   Pause = 'pause',
   SoftPause = 'softpause'
 }
+
+export class AibackSettings {
+  public serverName!: string
+
+  public threadsCount!: number
+
+  public headless!: boolean
+
+  public xmlkey!: string
+  public xmluser!: string
+
+  public wtntoken!: string
+
+  public limitCpu!: number
+
+  public limitRam!: number
+}
