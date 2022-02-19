@@ -538,7 +538,6 @@ export enum SocketEvent {
   AibackRefresh = 'aiback.refresh',
   AibackChangeThreads = 'aiback.changeThreads',
 
-
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
   ExtractorPrefix = 'extractor_'
