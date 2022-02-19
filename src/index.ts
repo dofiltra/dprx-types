@@ -535,6 +535,7 @@ export enum SocketEvent {
   AibackStopContainer = 'aiback.stopContainer',
   AibackState = 'aiback.state',
   AibackRefresh = 'aiback.refresh',
+  AibackChangeThreads = 'aiback.changeThreads',
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
