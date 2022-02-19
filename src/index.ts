@@ -521,6 +521,7 @@ export enum SocketEvent {
   AnalCreateBulk = 'anal.createBulk',
   OdmStats = 'odm.stats',
   SendQueue = 'web.sendQueue',
+  TaskCompleted = 'task.completed',
 
   AibackLoadSettings = 'aiback.loadSettings',
   AibackSetData = 'aiback.setData',
@@ -536,6 +537,7 @@ export enum SocketEvent {
   AibackState = 'aiback.state',
   AibackRefresh = 'aiback.refresh',
   AibackChangeThreads = 'aiback.changeThreads',
+
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
