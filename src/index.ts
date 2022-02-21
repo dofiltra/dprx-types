@@ -521,6 +521,7 @@ export enum SocketEvent {
   AnalCreateBulk = 'anal.createBulk',
   OdmStats = 'odm.stats',
   SendQueue = 'web.sendQueue',
+  ProxiesData = 'web.proxiesData',
 
   AibackLoadSettings = 'aiback.loadSettings',
   AibackSetData = 'aiback.setData',
