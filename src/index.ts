@@ -519,7 +519,7 @@ export enum SocketEvent {
   Join = 'join',
 
   AnalCreateBulk = 'anal.createBulk',
-  OdmStats = 'odm.stats',
+  SocketData = 'odm.stats',
   SendQueue = 'web.sendQueue',
   ProxiesData = 'web.proxiesData',
 
