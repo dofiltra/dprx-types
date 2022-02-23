@@ -484,6 +484,7 @@ export class DoreadData {
   public textContent?: string
   public length?: number
   public siteName?: string
+  public tags?: string
 
   public originalHtml?: string
 }
