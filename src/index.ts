@@ -280,6 +280,7 @@ export class BlockData {
   public title?: string
   public message?: string
   public alignment?: 'left' | 'right' | 'center'
+  public style?: 'unordered' | 'ordered'
   public html?: string
   public content?: any[]
   public withHeadings?: boolean
@@ -287,6 +288,7 @@ export class BlockData {
   public withBackground?: boolean
   public withBorder?: boolean
   public stretched?: boolean
+  public file?: { url?: string }
 }
 export enum TaskStatus {
   NotStarted = 0,
