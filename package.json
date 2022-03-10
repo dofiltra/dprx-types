@@ -41,8 +41,5 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "esm-requirer": "^1.0.3",
-    "time-helpers": "^1.0.0"
   }
 }
