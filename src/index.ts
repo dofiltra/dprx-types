@@ -487,6 +487,7 @@ export class DoreadData {
   public tags?: string
 
   public originalHtml?: string
+  public blocks?: BlockContent
 }
 
 export enum AnalType {
