@@ -490,7 +490,7 @@ export class DoreadData {
 
   public originalHtml?: string
   public blocks?: BlockContent[]
-  public urls?: string[]
+  public sources?: string[]
 }
 
 export enum AnalType {
