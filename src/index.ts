@@ -587,7 +587,7 @@ export enum ExchangeName {
   Okx = 'OKX'
 }
 
-export enum Currency {
+export enum P2PCurrency {
   USDT = 'USDT',
   RUB = 'RUB',
   TRY = 'TRY'
