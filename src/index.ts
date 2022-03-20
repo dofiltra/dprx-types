@@ -598,6 +598,12 @@ export enum TradeType {
   Buy = 'BUY'
 }
 
+export type TP2PMarketData = {
+  exchangeName: ExchangeName
+  buy: TP2POrder[]
+  sell: TP2POrder[]
+}
+
 export type TP2POrder = {
   price: string
   quoteMinAmountPerOrder: string
