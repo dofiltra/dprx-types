@@ -605,6 +605,8 @@ export type TP2PMarketData = {
 }
 
 export type TP2POrder = {
+  exchangeName: ExchangeName
+
   price: string
   quoteMinAmountPerOrder: string
   quoteMaxAmountPerOrder: string
