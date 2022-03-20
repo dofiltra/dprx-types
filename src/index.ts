@@ -587,6 +587,12 @@ export enum ExchangeName {
   Okx = 'OKX'
 }
 
+export enum Currency {
+  USDT = 'USDT',
+  RUB = 'RUB',
+  TRY = 'TRY'
+}
+
 export type TP2POrder = {
   price: string
   quoteMinAmountPerOrder: string
