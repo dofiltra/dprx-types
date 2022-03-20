@@ -593,6 +593,11 @@ export enum P2PCurrency {
   TRY = 'TRY'
 }
 
+export enum TradeType {
+  Sell = 'SELL',
+  Buy = 'BUY'
+}
+
 export type TP2POrder = {
   price: string
   quoteMinAmountPerOrder: string
