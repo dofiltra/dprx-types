@@ -545,11 +545,15 @@ export enum SocketEvent {
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
-  ExtractorPrefix = 'extractor_'
+  ExtractorPrefix = 'extractor_',
+
+  P2PUpdate = 'p2p.update',
+  GetP2PData = 'p2p.getData'
 }
 
 export enum SocketRoom {
-  Aiback = 'aiback'
+  Aiback = 'aiback',
+  Exchange = 'exchange'
 }
 
 export enum ModuleName {
@@ -576,4 +580,46 @@ export class AibackSettings {
 
   public limitCpu!: number
   public limitRam!: number
+}
+
+export enum ExchangeName {
+  Binance = 'BINANCE',
+  Okx = 'OKX'
+}
+
+export type TP2POrder = {
+  price: string
+  quoteMinAmountPerOrder: string
+  quoteMaxAmountPerOrder: string
+  paymentMethods: string[]
+
+  alreadyTraded: boolean
+  availableAmount: string
+  baseCurrency: string
+  black: boolean
+  cancelledOrderQuantity: number
+  completedOrderQuantity: number
+  completedRate: string
+  creatorType: string
+  guideUpgradeKyc: boolean
+  id: string
+  intention: boolean
+  maxCompletedOrderQuantity: number
+  maxUserCreatedDate: number
+  merchantId: string
+  minCompletedOrderQuantity: number
+  minCompletionRate: string
+  minKycLevel: number
+  minSellOrders: number
+  mine: false
+  nickName: string
+
+  publicUserId: string
+  quoteCurrency: string
+  quoteScale: number
+  quoteSymbol: string
+  receivingAds: boolean
+  safetyLimit: boolean
+  side: string
+  userType: string
 }
