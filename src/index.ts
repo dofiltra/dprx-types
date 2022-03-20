@@ -640,3 +640,97 @@ export type TP2POrder = {
   side: string
   userType: string
 }
+
+export type TP2PBinanceOrder = {
+  adv: {
+    advNo: string
+    classify: string
+    tradeType: TradeType
+    asset: P2PCurrency
+    fiatUnit: P2PCurrency
+    advStatus: null
+    priceType: null
+    priceFloatingRatio: null
+    rateFloatingRatio: null
+    currencyRate: null
+    price: string
+    initAmount: string
+    surplusAmount: string
+    amountAfterEditing: null
+    maxSingleTransAmount: string
+    minSingleTransAmount: string
+    buyerKycLimit: null
+    buyerRegDaysLimit: null
+    buyerBtcPositionLimit: null
+    remarks: null
+    autoReplyMsg: string
+    payTimeLimit: number
+    tradeMethods: {
+      payId: null
+      payMethodId: string
+      payType: string
+      payAccount: null
+      payBank: null
+      paySubBank: null
+      identifier: string
+      iconUrlColor: string
+      tradeMethodName: string
+      tradeMethodShortName: string
+      tradeMethodBgColor: string
+    }[]
+    userTradeCountFilterTime: null
+    userBuyTradeCountMin: null
+    userBuyTradeCountMax: null
+    userSellTradeCountMin: null
+    userSellTradeCountMax: null
+    userAllTradeCountMin: null
+    userAllTradeCountMax: null
+    userTradeCompleteRateFilterTime: null
+    userTradeCompleteCountMin: null
+    userTradeCompleteRateMin: null
+    userTradeVolumeFilterTime: null
+    userTradeType: null
+    userTradeVolumeMin: null
+    userTradeVolumeMax: null
+    userTradeVolumeAsset: null
+    createTime: null
+    advUpdateTime: null
+    fiatVo: null
+    assetVo: null
+    advVisibleRet: null
+    assetLogo: null
+    assetScale: number
+    fiatScale: number
+    priceScale: number
+    fiatSymbol: string
+    isTradable: boolean
+    dynamicMaxSingleTransAmount: string
+    minSingleTransQuantity: string
+    maxSingleTransQuantity: string
+    dynamicMaxSingleTransQuantity: string
+    tradableQuantity: string
+    commissionRate: string
+    tradeMethodCommissionRates: any[]
+    launchCountry: null
+  }
+  advertiser: {
+    userNo: string
+    realName: null
+    nickName: string
+    margin: null
+    marginUnit: null
+    orderCount: null
+    monthOrderCount: number
+    monthFinishRate: number
+    advConfirmTime: 0
+    email: null
+    registrationTime: null
+    mobile: null
+    userType: string
+    tagIconUrls: []
+    userGrade: number
+    userIdentity: string
+    proMerchant: null
+    isBlocked: null
+  }
+}
