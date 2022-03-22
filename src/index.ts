@@ -598,15 +598,28 @@ export enum TradeType {
   Buy = 'BUY'
 }
 
-export class P2PMarketData  {
+export class P2PMarketData {
   public exchangeName!: ExchangeName
-  public buy!: TP2POrder[]
-  public sell!: TP2POrder[]
+  public buy!: P2POrder[]
+  public sell!: P2POrder[]
 }
 
-export type TP2POrder = {
-  exchangeName: ExchangeName
+export class P2POrder {
+  public exchangeName!: ExchangeName
+  public id!: string
+  public price!: string
 
+  public tradeType!: TradeType
+  public paymentMethods!: string[]
+  public baseCurrency!: P2PCurrency
+  public currency!: P2PCurrency
+  public maxAmountPerOrder!: string
+  public minAmountPerOrder!: string
+  public scale!:number
+  public symbol!: string
+}
+
+export type TP2POkxOrder = {
   price: string
   quoteMinAmountPerOrder: string
   quoteMaxAmountPerOrder: string
