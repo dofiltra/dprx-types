@@ -615,7 +615,7 @@ export class P2POrder {
   public currency!: P2PCurrency
   public maxAmountPerOrder!: string
   public minAmountPerOrder!: string
-  public scale!:number
+  public scale!: number
   public symbol!: string
 }
 
