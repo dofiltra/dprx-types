@@ -600,6 +600,7 @@ export enum TradeType {
 
 export class P2PMarketData {
   public exchangeName!: ExchangeName
+  public currency!: P2PCurrency
   public buy!: P2POrder[]
   public sell!: P2POrder[]
 }
