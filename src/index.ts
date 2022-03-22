@@ -598,10 +598,10 @@ export enum TradeType {
   Buy = 'BUY'
 }
 
-export type TP2PMarketData = {
-  exchangeName: ExchangeName
-  buy: TP2POrder[]
-  sell: TP2POrder[]
+export class P2PMarketData  {
+  public exchangeName!: ExchangeName
+  public buy!: TP2POrder[]
+  public sell!: TP2POrder[]
 }
 
 export type TP2POrder = {
