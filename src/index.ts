@@ -590,7 +590,8 @@ export enum ExchangeName {
 export enum P2PCurrency {
   USDT = 'USDT',
   RUB = 'RUB',
-  TRY = 'TRY'
+  TRY = 'TRY',
+  UAH = 'UAH'
 }
 
 export enum TradeType {
