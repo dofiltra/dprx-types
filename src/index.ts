@@ -468,8 +468,19 @@ export class Doextractor {
   public rewriteOpts?: TExtrRewriteOpts
   public translateOpts?: TExtrTranslateOpts
 
+  public googleParserOpts?: GoogleParserOpts
+  public yandexParserOpts?: YandexParserOpts
+
   public results?: DoreadData[]
   public union?: DoreadData
+}
+
+export class GoogleParserOpts {
+  public enable!: boolean
+}
+
+export class YandexParserOpts {
+  public enable!: boolean
 }
 
 export class DoreadData {
