@@ -573,8 +573,11 @@ export class AibackSettings {
   public threadsCount!: number
   public headless!: boolean
 
-  public xmlkey!: string
   public xmluser!: string
+  public xmlkey!: string
+
+  public xmlriveruser!: string
+  public xmlriverkey!: string
 
   public wtntoken!: string
 
