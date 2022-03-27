@@ -588,10 +588,16 @@ export enum ExchangeName {
 }
 
 export enum P2PCurrency {
-  USDT = 'USDT',
   RUB = 'RUB',
   TRY = 'TRY',
-  UAH = 'UAH'
+  UAH = 'UAH',
+  KZT = 'KZT',
+  MDL = 'MDL'
+}
+
+export enum P2PBaseCurrency {
+  USDT = 'USDT',
+  USDC = 'USDC'
 }
 
 export enum TradeType {
