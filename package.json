@@ -1,6 +1,6 @@
 {
   "name": "dprx-types",
-  "version": "1.1.102",
+  "version": "1.1.103",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"jest --config jestconfig.json\"",
     "build": "tsc",
-    "patch": "yarn version --pre --patch",
+    "pub": "yarn version --pre --patch && npm publish",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepublishOnly": "npm test && npm run lint",
