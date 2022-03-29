@@ -771,3 +771,8 @@ export type TP2PBinanceOrder = {
     isBlocked: null
   }
 }
+
+export class AiSite {
+  public host!: string
+  public token!: string
+}
