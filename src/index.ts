@@ -590,6 +590,8 @@ export class AibackSettings {
   public xmlriveruser!: string
   public xmlriverkey!: string
 
+  public ruCaptchaKey?: string
+
   public wtntoken!: string
 
   public limitCpu!: number
