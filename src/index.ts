@@ -553,6 +553,7 @@ export enum SocketEvent {
   AibackState = 'aiback.state',
   AibackRefresh = 'aiback.refresh',
   AibackChangeThreads = 'aiback.changeThreads',
+  AibackRegLiveinternet = 'aiback.regLiveinternet',
 
   RewritePrefix = 'rewritetext_',
   TranslatePrefix = 'translate_',
