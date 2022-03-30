@@ -779,3 +779,9 @@ export class AiSite {
   public host!: string
   public token!: string
 }
+
+export type TLiveinternetOpts = {
+  host: string
+  email: string
+  password: string
+}
