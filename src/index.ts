@@ -989,7 +989,6 @@ export type TLiveinternetOpts = {
   password: string
 }
 
-
 export class GoogleParserLocation {
   static getAll() {
     return locations
