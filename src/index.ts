@@ -2706,3 +2706,12 @@ const locations = [
     targetType: 'Country'
   }
 ]
+
+export class Lead {
+  telegramId!: number
+  serviceName!: string
+
+  username?: string
+  firstname?: string
+  lastname?: string
+}
