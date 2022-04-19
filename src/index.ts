@@ -768,7 +768,8 @@ export enum SocketEvent {
 
 export enum SocketRoom {
   Aiback = 'aiback',
-  Exchange = 'exchange'
+  Exchange = 'exchange',
+  Leads = 'leads'
 }
 
 export enum ModuleName {
