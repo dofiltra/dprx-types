@@ -762,8 +762,11 @@ export enum SocketEvent {
   TranslatePrefix = 'translate_',
   ExtractorPrefix = 'extractor_',
 
+  GetP2PData = 'p2p.getData',
   P2PUpdate = 'p2p.update',
-  GetP2PData = 'p2p.getData'
+
+  GetLeads = 'leads.get',
+  LeadsUpdate = 'leads.update',
 }
 
 export enum SocketRoom {
