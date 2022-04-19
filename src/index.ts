@@ -766,7 +766,7 @@ export enum SocketEvent {
   P2PUpdate = 'p2p.update',
 
   GetLeads = 'leads.get',
-  LeadsUpdate = 'leads.update',
+  LeadsUpdate = 'leads.update'
 }
 
 export enum SocketRoom {
