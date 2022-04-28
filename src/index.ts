@@ -805,9 +805,9 @@ export class AibackSettings {
   public limitCpu!: number
   public limitRam!: number
 
-  public disableRewriter!: boolean
-  public disableTranslator!: boolean
-  public disableExtractor!: boolean
+  public enabledRewriter!: boolean
+  public enabledTranslator!: boolean
+  public enabledExtractor!: boolean
 }
 
 export enum ExchangeName {
