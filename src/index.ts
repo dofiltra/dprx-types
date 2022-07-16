@@ -821,7 +821,18 @@ export enum P2PCurrency {
   RUB = 'RUB',
   TRY = 'TRY',
   UAH = 'UAH',
-  KZT = 'KZT',
+  KZT = 'KZT'
+}
+
+export enum P2PPair {
+  WMZ_C2C = 'WMZ_C2C',
+  REVOLUT_USDT = 'REVOLUT_USDT',
+  WMZ_REVOLUT = 'WMZ_REVOLUT',
+  USDT_WMZ = 'USDT_WMZ',
+  WMZ_SBP = 'WMZ_SBP',
+  WMZ_YOO = 'WMZ_YOO',
+  WMZ_QIWI = 'WMZ_QIWI',
+  WMZ_CARD = 'WMZ_CARD'
 }
 
 export enum P2PBaseCurrency {
@@ -836,7 +847,7 @@ export enum TradeType {
 
 export class P2PMarketData {
   public exchangeName!: ExchangeName
-  public currency!: P2PCurrency
+  public currency!: P2PCurrency | P2PPair
   public buy!: P2POrder[]
   public sell!: P2POrder[]
 }
