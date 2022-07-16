@@ -998,6 +998,12 @@ export type TP2PBinanceOrder = {
   }
 }
 
+export enum HuobiCurrency {
+  RUB = 11,
+  TRY = 23,
+  UAH = 45
+}
+
 export class AiSite {
   public host!: string
   public token!: string
