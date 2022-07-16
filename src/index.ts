@@ -812,7 +812,9 @@ export class AibackSettings {
 
 export enum ExchangeName {
   Binance = 'BINANCE',
-  Okx = 'OKX'
+  Okx = 'OKX',
+  Huobi = 'HUOBI',
+  ExchangerMoney = 'EXCHANGER_MONEY'
 }
 
 export enum P2PCurrency {
