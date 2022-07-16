@@ -822,7 +822,6 @@ export enum P2PCurrency {
   TRY = 'TRY',
   UAH = 'UAH',
   KZT = 'KZT',
-  MDL = 'MDL'
 }
 
 export enum P2PBaseCurrency {
