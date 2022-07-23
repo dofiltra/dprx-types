@@ -808,6 +808,9 @@ export class AibackSettings {
   public enabledRewriter!: boolean
   public enabledTranslator!: boolean
   public enabledExtractor!: boolean
+
+  public wmEmail!: string
+  public wmPass!: string
 }
 
 export enum ExchangeName {
